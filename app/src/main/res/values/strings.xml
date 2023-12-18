@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">JsPlayground</string>
+    <string name="app_name">Algo</string>
+    <string name="start_coding">Start coding</string>
+    <string name="subtitle">Practice algorithmic tasks with Javascript</string>
+    <string name="home_title">Welcome to Algo! What algorithmic tasks do you want to solve?</string>
+    <string name="home_subtitle">Choose one task to practice.</string>
+    <string name="status">Status</string>
+    <string name="difficultly">Difficultly</string>
 </resources>

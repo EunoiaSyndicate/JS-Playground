@@ -1,6 +1,7 @@
 package com.example.js_playground
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,5 +44,11 @@ class CardAdapter(private val context: Context, private val items: List<CardData
     holder.cardTitle.text = item.title
     holder.cardStatus.text = String.format("%s: %s",status, item.status)
     holder.cardDifficultly.text = String.format("%s: %s", difficultly, item.difficultly)
+
+    holder.itemView.setOnClickListener {
+      val intent = Intent(context, TaskActivity::class.java)
+      intent.putExtra(TaskActivity.EXTRA_TASK_DATA, item)
+      context.startActivity(intent)
+    }
   }
 }

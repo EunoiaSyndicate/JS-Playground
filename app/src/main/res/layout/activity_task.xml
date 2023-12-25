@@ -6,16 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".TaskActivity">
 
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/image_buttons_layout" />
+
+    <ImageButton
+            android:id="@+id/star"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:src="@drawable/baseline_star_border_24"
+            app:layout_constraintEnd_toStartOf="@+id/light_mode_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:src="@drawable/menu_24px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+            android:id="@+id/light_mode_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:src="@drawable/light_mode_24px"
+            app:layout_constraintEnd_toStartOf="@+id/bookmark_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+            android:id="@+id/bookmark_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:src="@drawable/bookmark_24px"
+            app:layout_constraintEnd_toStartOf="@+id/to_home_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+            android:id="@+id/to_home_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:src="@drawable/to_home_screen_24"
+            app:layout_constraintEnd_toStartOf="@+id/info_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+            android:id="@+id/info_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:src="@drawable/info_24px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tool_bar">
+        app:layout_constraintTop_toBottomOf="@+id/to_home_button">
 
         <Button
             android:id="@+id/task_button"

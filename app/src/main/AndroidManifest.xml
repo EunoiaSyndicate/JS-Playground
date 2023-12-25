@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".TaskActivity" />
+        <activity android:name=".AboutUsActivity" />
     </application>
 
 </manifest>

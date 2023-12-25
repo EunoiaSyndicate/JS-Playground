@@ -6,6 +6,11 @@
     <string name="home_subtitle">Choose one task to practice.</string>
     <string name="status">Status</string>
     <string name="difficultly">Difficultly</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
+    <string name="about_us">Hello. This is our app -
+        Algo. Algo is created to provide users with an interactive platform for learning and practicing programming.
+        We strive to make the learning process fun and accessible for everyone. Our developers - Daniil Timofeev and Basarab Stanislav
+    </string>
     <string name="task_text">Task</string>
     <string name="editor_text">Editor</string>
     <string name="tests_text">Tests</string>

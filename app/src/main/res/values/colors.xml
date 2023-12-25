@@ -3,5 +3,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_red">#F2CFCD</color>
+    <color name="dark_red">#E91E63</color>
+    <color name="colorPrimary">#ef4056</color>
+    <color name="colorPrimaryDark">#ac2435</color>
+    <color name="colorAccent">#50bcb6</color>
+    <color name="colorDescriptionText">#ef4056</color>
+
+    <style name="TextAppearance.Montserrat.Bold" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+    <style name="TextAppearance.Montserrat.Medium" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
     <color name="highlight_grey">#EDEDED</color>
 </resources>

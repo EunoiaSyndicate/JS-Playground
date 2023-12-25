@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/action_change_theme"
+            android:title="Change Theme" />
+    <item
+            android:id="@+id/action_bookmarks"
+            android:title="Bookmarks" />
+    <item
+            android:id="@+id/action_about_us"
+            android:title="About Us" />
+    <item
+            android:id="@+id/action_to_main"
+            android:title="To MainActivity" />
+</menu>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/action_change_theme"
+            android:title="Change Theme" />
+    <item
+            android:id="@+id/action_bookmarks"
+            android:title="Bookmarks" />
+    <item
+            android:id="@+id/action_about_us"
+            android:title="About Us" />
+    <item
+            android:id="@+id/action_to_home"
+            android:title="To Home" />
+    <item
+            android:id="@+id/action_add_to_favourites"
+            android:title="Add favourite task" />
+</menu>

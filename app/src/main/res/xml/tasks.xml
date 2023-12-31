@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+    <CardData>
+        <title>Even or Odd</title>
+        <status>❌</status>
+        <difficultly>Easy</difficultly>
+        <description>
+            Create a function that takes an integer as an argument and returns "Even" for
+            even numbers or "Odd" for odd numbers.
+        </description>
+        <testInputs><list>2</list></testInputs>
+        <testInputs><list>7</list></testInputs>
+        <testInputs><list>-42</list></testInputs>
+        <testInputs><list>-7</list></testInputs>
+        <testInputs><list>0</list></testInputs>
+        <testOutputs>Even</testOutputs>
+        <testOutputs>Odd</testOutputs>
+        <testOutputs>Even</testOutputs>
+        <testOutputs>Odd</testOutputs>
+        <testOutputs>Even</testOutputs>
+    </CardData>
+</list>

@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "title": "Even or Odd",
+      "status": "❌",
+      "difficulty": "Easy",
+      "description": "Create a function that takes an integer as an argument and returns \"Even\" for even numbers or \"Odd\" for odd numbers.",
+      "testInputs": [
+        ["2"],
+        ["7"],
+        ["-42"],
+        ["-7"],
+        ["0"]
+      ],
+      "testOutputs": [
+        "Even",
+        "Odd",
+        "Even",
+        "Odd",
+        "Even"
+      ]
+    }
+  ]
+}

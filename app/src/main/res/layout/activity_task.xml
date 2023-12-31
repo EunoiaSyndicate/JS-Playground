@@ -7,75 +7,119 @@
     tools:context=".TaskActivity">
 
     <include
-        android:id="@+id/include"
-        layout="@layout/image_buttons_layout"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:id="@+id/tool_bar"
+        layout="@layout/image_buttons_layout" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="290dp"
+    <LinearLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_light"
-        android:gravity="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.256"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar">
 
-    <Button
-        android:id="@+id/btnTestsResult"
-        android:layout_width="122dp"
-        android:layout_height="58dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:onClick="openTestsResultTextView"
-        android:text="Tests Result"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
+        <Button
+            android:id="@+id/task_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/task_text"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/editor_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/editor_text"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/tests_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tests_text"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+
 
     <FrameLayout
-        android:id="@+id/fragmentContainer"
-        android:layout_width="411dp"
-        android:layout_height="311dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/task_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/control"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/btnCodeEditor"
-        android:layout_width="122dp"
-        android:layout_height="58dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:onClick="openCodeEditor"
-        android:text="Code Editor"
-        android:textSize="16sp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/task_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/task_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/task_header"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/editor_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/control"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.amrdeveloper.codeview.CodeView
+            android:id="@+id/codeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dropDownWidth="150dp"
+            android:fontFamily="@font/jet_brains_mono_medium"
+            android:textSize="16sp"
+            android:dropDownHorizontalOffset="0dp"
+            android:dropDownSelector="@color/white"
+            android:gravity="top|start" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tests_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/control"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/done_24px"
+        android:backgroundTint="@color/light_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
-
-    <Button
-        android:id="@+id/btnTasks"
-        android:layout_width="122dp"
-        android:layout_height="58dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:onClick="openTasksTextView"
-        android:text="Tasks"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
+        android:layout_margin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

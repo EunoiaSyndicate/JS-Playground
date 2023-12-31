@@ -9,8 +9,10 @@ import android.widget.TextView
 import androidx.core.view.setMargins
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
-class CardAdapter(private val context: Context, private val items: List<CardData>) :
+class CardAdapter(private val context: Context, private val taskList: TaskList) :
   RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
   class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -33,22 +35,24 @@ class CardAdapter(private val context: Context, private val items: List<CardData
   }
 
   override fun getItemCount(): Int {
-    return items.size
+    return taskList.tasks.size
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-    val item = items[position]
+    val item = taskList.tasks[position]
     val status = context.getString(R.string.status)
     val difficultly = context.getString(R.string.difficultly)
 
     holder.cardTitle.text = item.title
     holder.cardStatus.text = String.format("%s: %s",status, item.status)
-    holder.cardDifficultly.text = String.format("%s: %s", difficultly, item.difficultly)
+    holder.cardDifficultly.text = String.format("%s: %s", difficultly, item.difficulty)
+    holder.itemView.setOnClickListener { onClickCardListener(item) }
+  }
 
-    holder.itemView.setOnClickListener {
-      val intent = Intent(context, TaskActivity::class.java)
-      intent.putExtra(TaskActivity.EXTRA_TASK_DATA, item)
-      context.startActivity(intent)
-    }
+  private fun onClickCardListener(item: Task) {
+    val intent = Intent(context, TaskActivity::class.java)
+    val json = Json.encodeToString(item)
+    intent.putExtra(TaskActivity.TASK, json)
+    context.startActivity(intent)
   }
 }

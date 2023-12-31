@@ -6,4 +6,7 @@
     <string name="home_subtitle">Choose one task to practice.</string>
     <string name="status">Status</string>
     <string name="difficultly">Difficultly</string>
+    <string name="task_text">Task</string>
+    <string name="editor_text">Editor</string>
+    <string name="tests_text">Tests</string>
 </resources>

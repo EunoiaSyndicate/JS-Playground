@@ -2,7 +2,7 @@
   "tasks": [
     {
       "title": "Even or Odd",
-      "status": "❌",
+      "status": "✔\uFE0F",
       "difficulty": "Easy",
       "description": "Create a function that takes an integer as an argument and returns \"Even\" for even numbers or \"Odd\" for odd numbers.",
       "testInputs": [
@@ -18,6 +18,109 @@
         "Even",
         "Odd",
         "Even"
+      ]
+    }, {
+      "title": "Mult. of 3 or 5",
+      "status": "✔\uFE0F",
+      "difficulty": "Medium",
+      "description": "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\n\nFinish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.\n\nAdditionally, if the number is negative, return 0.\n\nNote: If the number is a multiple of both 3 and 5, only count it once.",
+      "testInputs": [
+        ["10"]
+      ],
+      "testOutputs": [
+        "23"
+      ]
+    }, {
+      "title": "Vowel Count",
+      "status": "✔\uFE0F",
+      "difficulty": "Hard",
+      "description": "Return the number (count) of vowels in the given string.\n\nWe will consider a, e, i, o, u as vowels for this Kata (but not y).\n\nThe input string will only consist of lower case letters and/or spaces.",
+      "testInputs": [
+        ["\"abracadabra\""]
+      ],
+      "testOutputs": [
+        "5"
+      ]
+    }, {
+      "title": "Disemvowel Trolls",
+      "status": "✔\uFE0F",
+      "difficulty": "Hard",
+      "description": "Trolls are attacking your comment section!\n\nA common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.\n\nYour task is to write a function that takes a string and return a new string with all vowels removed.\n\nFor example, the string \"This website is for losers LOL!\" would become \"Ths wbst s fr lsrs LL!\".",
+      "testInputs": [
+        ["\"This website is for losers LOL!\""],
+        ["\"No offense but,\\nYour writing is among the worst I've ever read\""],
+        ["\"What are you, a communist?\""]
+      ],
+      "testOutputs": [
+        "Ths wbst s fr lsrs LL!",
+        "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd",
+        "Wht r y,  cmmnst?"
+      ]
+    }, {
+      "title": "Who likes it?",
+      "status": "✔\uFE0F",
+      "difficulty": "Easy",
+      "description": "You probably know the \"like\" system from Facebook and other pages. People can \"like\" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.\n\nImplement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:\n\n[]                                -->  \"no one likes this\"\n[\"Peter\"]                         -->  \"Peter likes this\"\n[\"Jacob\", \"Alex\"]                 -->  \"Jacob and Alex like this\"\n[\"Max\", \"John\", \"Mark\"]           -->  \"Max, John and Mark like this\"\n[\"Alex\", \"Jacob\", \"Mark\", \"Max\"]  -->  \"Alex, Jacob and 2 others like this\"\nNote: For 4 or more names, the number in \"and 2 others\" simply increases.",
+      "testInputs": [
+        ["[]"],
+        ["['Peter']"],
+        ["['Jacob', 'Alex']"],
+        ["['Max', 'John', 'Mark']"],
+        ["['Alex', 'Jacob', 'Mark', 'Max']"]
+      ],
+      "testOutputs": [
+        "no one likes this",
+        "Peter likes this",
+        "Jacob and Alex like this",
+        "Max, John and Mark like this",
+        "Alex, Jacob and 2 others like this"
+      ]
+    }, {
+      "title": "Digital Root",
+      "status": "✔\uFE0F",
+      "difficulty": "Hard",
+      "description": "Digital root is the recursive sum of all the digits in a number.\n\nGiven n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.",
+      "testInputs": [
+        ["16"],
+        ["456"]
+      ],
+      "testOutputs": [
+        "7",
+        "6"
+      ]
+    }, {
+      "title": "Phone number",
+      "status": "✔\uFE0F",
+      "difficulty": "Medium",
+      "description": "Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.\n\nExample\ncreatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns \"(123) 456-7890\"\nThe returned format must be correct in order to complete this challenge.\n\nDon't forget the space after the closing parentheses!",
+      "testInputs": [
+        ["[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]"],
+        ["[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]"],
+        ["[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]"]
+      ],
+      "testOutputs": [
+        "(123) 456-7890",
+        "(111) 111-1111",
+        "(123) 456-7890"
+      ]
+    }, {
+      "title": "Bit Counting",
+      "status": "✔\uFE0F",
+      "difficulty": "Hard",
+      "description": "Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.\n\nExample: The binary representation of 1234 is 10011010010, so the function should return 5 in this case",
+      "testInputs": [
+        ["0"],
+        ["4"],
+        ["7"],
+        ["9"],
+        ["10"]
+      ],
+      "testOutputs": [
+        "0",
+        "1",
+        "3",
+        "2",
+        "2"
       ]
     }
   ]

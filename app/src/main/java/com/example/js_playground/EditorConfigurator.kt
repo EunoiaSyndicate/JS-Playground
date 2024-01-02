@@ -8,7 +8,7 @@ import java.util.regex.Pattern
 class EditorConfigurator {
   companion object {
     private val syntaxPatterns = mapOf<Pattern, Int>(
-      Pattern.compile("\\b(if|else|for|while|function|return|var|let|const|in|of)\\b|=>") to Color.rgb(0,0,255),
+      Pattern.compile("\\b(if|else|case|default|for|switch|while|function|return|var|let|const|in|of)\\b|=>") to Color.rgb(0,0,255),
       Pattern.compile("\"(?:[^\"\\\\]|\\\\.)*\"|'(?:[^'\\\\]|\\\\.)*'") to Color.rgb(0,128,0),
       Pattern.compile("(//.*\$|/\\*[\\s\\S]*?\\*/)") to Color.rgb(128,128,128),
       Pattern.compile("\\b\\d+\\b") to Color.rgb(128,0,128),

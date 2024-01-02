@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-  implementation("androidx.javascriptengine:javascriptengine:1.0.0-beta01")
+  implementation("com.eclipsesource.j2v8:j2v8:6.0.0@aar")
   implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
   implementation("androidx.cardview:cardview:1.0.0")
   implementation("com.github.AmrDeveloper:CodeView:1.3.7")

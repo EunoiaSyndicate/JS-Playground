@@ -8,6 +8,8 @@
     <color name="colorPrimaryDark">#ac2435</color>
     <color name="colorAccent">#50bcb6</color>
     <color name="colorDescriptionText">#ef4056</color>
+    <color name="success">#F2FFE9</color>
+    <color name="fail">#EA906C</color>
 
     <style name="TextAppearance.Montserrat.Bold" parent="TextAppearance.AppCompat">
         <item name="fontFamily">@font/montserrat_bold</item>

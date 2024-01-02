@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
   private lateinit var bookmarkManager: BookmarkManager
   private lateinit var bookmarkButton: ImageButton
   private lateinit var menuButton: ImageButton
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     themeManager = ThemeManager(this)
